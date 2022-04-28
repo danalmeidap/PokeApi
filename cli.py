@@ -1,13 +1,14 @@
-from validations import validate_option
 from time import sleep
-from core import search_for_name, search_for_id
+
+from core import search_for_id, search_for_name
+from validations import validate_option
 
 
 def menu() -> None:
-    print('Pokedex menu: ')
+    print("Pokedex menu: ")
     print("1 - Search using pokemon's name")
     print("2 - Search using pokemon's id")
-    print('3 - Quit pokedex')
+    print("3 - Quit pokedex")
 
     option: int = validate_option("Option: ")
 

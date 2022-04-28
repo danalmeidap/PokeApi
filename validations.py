@@ -1,7 +1,8 @@
 from sys import exit
-from models import Pokemon
-from reader import read_input_as_string, read_input_as_integer
+
 from api import Api
+from models import Pokemon
+from reader import read_input_as_integer, read_input_as_string
 
 
 def validate_pokemon(msg: str) -> Pokemon:
@@ -27,7 +28,7 @@ def validate_id(msg: str) -> Pokemon:
                 return verify
             else:
                 print("Id is nos valid")
-        except(ValueError, TypeError):
+        except (ValueError, TypeError):
             print("The value should be an integer")
         except KeyboardInterrupt:
             exit("Interruptted by user")
@@ -41,7 +42,7 @@ def validate_option(msg: str) -> int:
                 return value
             else:
                 print("The value must be positive and in the menu options")
-        except(ValueError, TypeError):
+        except (ValueError, TypeError):
             print("The value should be an integer")
         except KeyboardInterrupt:
             exit("Interruptted by user")
