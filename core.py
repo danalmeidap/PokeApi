@@ -1,7 +1,8 @@
 from time import sleep
-from models import Pokemon
-from validations import validate_pokemon, validate_id
+
 from checks import will_continue
+from models import Pokemon
+from validations import validate_id, validate_pokemon
 
 
 def search_for_name() -> None:

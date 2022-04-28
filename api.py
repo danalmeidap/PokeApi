@@ -1,15 +1,19 @@
-import requests
 import json
+
+import requests
+
 from models import Pokemon
 
 
 def fetch_data(json_file) -> Pokemon:
-    return Pokemon(json_file['name'],
-                   json_file['id'],
-                   json_file['weight'],
-                   json_file['height'],
-                   " ".join(map(lambda x: x['type']['name'], json_file['types'])),
-                   " ".join(map(lambda x: x['ability']['name'], json_file['abilities'])))
+    return Pokemon(
+        json_file["name"],
+        json_file["id"],
+        json_file["weight"],
+        json_file["height"],
+        " ".join(map(lambda x: x["type"]["name"], json_file["types"])),
+        " ".join(map(lambda x: x["ability"]["name"], json_file["abilities"])),
+    )
 
 
 class Api:
