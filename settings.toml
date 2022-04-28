@@ -1,4 +1,0 @@
-name = "Pokedex"
-
-[API]
-url = "https://pokeapi.co/api/v2/pokemon/"
