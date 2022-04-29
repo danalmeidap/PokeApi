@@ -1,0 +1,6 @@
+name = "pokedex"
+
+[database]
+url = "sqlite:///pokedex.db"
+[api]
+url = "https://pokeapi.co/api/v2/pokemon/"

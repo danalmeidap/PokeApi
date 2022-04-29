@@ -3,6 +3,7 @@ import json
 import requests
 
 from models import Pokemon
+from config import settings
 
 
 def fetch_data(json_file) -> Pokemon:
@@ -18,7 +19,7 @@ def fetch_data(json_file) -> Pokemon:
 
 class Api:
     def __init__(self):
-        self.__api = "https://pokeapi.co/api/v2/pokemon/"
+        self.__api = settings.api.url
 
     def find_by_name(self, name: str) -> Pokemon:
         data = requests.get(f"{self.__api}{name}")
