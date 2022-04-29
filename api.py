@@ -2,8 +2,8 @@ import json
 
 import requests
 
-from models import Pokemon
 from config import settings
+from models import Pokemon
 
 
 def fetch_data(json_file) -> Pokemon:
