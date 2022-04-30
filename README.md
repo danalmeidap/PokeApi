@@ -17,5 +17,5 @@
 - [x] Search pokemon by name on PokeApi
 - [x] Saving the PokeApi's information on a database
 - [x] List pokemons on database
-- [x] Search pokemon on database by name
+- [x] Search pokemon on database by id
 - [x] Delete pokemon from database
