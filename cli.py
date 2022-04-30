@@ -16,7 +16,6 @@ from validations import validate_option, validate_pokedex_index
 
 
 def pokedex_list() -> None:
-    """List employees from database"""
     pokemons: List[Pokedex] = get_pokemons_from_database()
     if len(pokemons) > 0:
         table = generate_pokedex_table(pokemons)
@@ -61,7 +60,6 @@ def generate_pokedex_table(pokemons: List[Pokedex]) -> Table:
 
 
 def delete_on_pokedex_by_id():
-    """Delete employee from database"""
     pokemons: List[Pokedex] = get_pokemons_from_database()
     if len(pokemons) > 0:
         pokedex_id: int = validate_pokedex_index("Index for searching: ")
