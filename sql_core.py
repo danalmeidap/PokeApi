@@ -36,6 +36,7 @@ def get_pokemon_from_database_by_id(pokedex_id) -> List[Pokedex]:
 
 
 def delete_pokemon_from_database(pokedex_id: int) -> bool:
+    """Dekete a pokemon from Pokedex by id"""
     with get_session() as session:
         statement = select(Pokedex).where(Pokedex.id == pokedex_id)
         results = session.exec(statement)
